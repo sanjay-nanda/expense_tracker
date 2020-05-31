@@ -10,10 +10,10 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 450,
       child: transactions.isEmpty
           ? Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text('No transations yet!...'),
@@ -46,7 +46,11 @@ class TransactionList extends StatelessWidget {
                     ),
                     subtitle: Text(
                         DateFormat.yMMMd().format(transactions[index].date)),
-                    trailing: IconButton(icon: Icon(Icons.delete), onPressed: () => deltx(transactions[index].id), color: Theme.of(context).errorColor,),
+                    trailing: IconButton(
+                      icon: Icon(Icons.delete),
+                      onPressed: () => deltx(transactions[index].id),
+                      color: Theme.of(context).errorColor,
+                    ),
                   ),
                 );
               },
